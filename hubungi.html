@@ -9,8 +9,8 @@
     />
     <title>Hubungi Kami | MSAA Solutions</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="assets/style.css?v=11" />
-    <script defer src="assets/main.js?v=11"></script>
+    <link rel="stylesheet" href="assets/style.css?v=12" />
+    <script defer src="assets/main.js?v=12"></script>
   </head>
   <body data-page="hubungi">
     <div id="site-header"></div>
@@ -59,10 +59,25 @@
               <div class="form-grid">
                 <label
                   >Nama penuh <span>*</span
-                  ><input name="nama" type="text" autocomplete="name" placeholder="Nama anda" required /></label
+                  ><input
+                    name="nama"
+                    type="text"
+                    autocomplete="name"
+                    placeholder="Nama anda"
+                    maxlength="120"
+                    required /></label
                 ><label
                   >Nombor telefon <span>*</span
-                  ><input name="telefon" type="tel" autocomplete="tel" placeholder="01X-XXX XXXX" required
+                  ><input
+                    name="telefon"
+                    type="tel"
+                    autocomplete="tel"
+                    inputmode="tel"
+                    pattern="\+?[0-9][0-9 \(\)\-]{7,23}"
+                    maxlength="24"
+                    title="Masukkan nombor telefon yang sah, contohnya 012-345 6789."
+                    placeholder="01X-XXX XXXX"
+                    required
                 /></label>
               </div>
               <label
@@ -82,6 +97,7 @@
                 ><textarea
                   name="mesej"
                   rows="5"
+                  maxlength="2000"
                   placeholder="Nyatakan keperluan anda secara ringkas..."
                   required
                 ></textarea></label
@@ -89,6 +105,17 @@
                 Teruskan ke WhatsApp <span aria-hidden="true">↗</span>
               </button>
               <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+              <!-- Pautan alternatif jika pelayar menyekat tetingkap WhatsApp. -->
+              <a
+                class="text-link whatsapp-fallback"
+                id="whatsapp-fallback"
+                href="https://wa.me/60125097527"
+                target="_blank"
+                rel="noopener noreferrer"
+                hidden
+              >
+                Buka Mesej dalam WhatsApp <span aria-hidden="true">↗</span>
+              </a>
             </form>
           </div>
         </div>
@@ -107,8 +134,8 @@
           <div class="location-grid">
             <div class="map-frame reveal">
               <iframe
-                title="Peta alamat MSAA Solutions di Bandar Meru Raya, Ipoh"
-                src="https://maps.google.com/maps?q=No.%2061%2C%20Tingkat%201%2C%20Jalan%20Meru%20Bestari%20A8%2C%20Bandar%20Meru%20Raya%2C%2030020%20Ipoh%2C%20Perak&amp;output=embed"
+                title="Carian alamat di Jalan Meru Bestari A8, Ipoh"
+                src="https://maps.google.com/maps?q=61%20Jalan%20Meru%20Bestari%20A8%2C%20Bandar%20Meru%20Raya%2C%20Ipoh%2C%20Perak&amp;output=embed"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
                 allowfullscreen
@@ -118,23 +145,41 @@
               <span class="location-pin" aria-hidden="true">⌖</span>
               <p class="form-kicker">ALAMAT SYARIKAT</p>
               <h3>Bandar Meru Raya,<br />Ipoh.</h3>
-              <address>No. 61, Tingkat 1, Jalan Meru Bestari A8, Bandar Meru Raya, 30020 Ipoh, Perak.</address>
+              <address id="office-address">
+                No. 61, Tingkat 1, Jalan Meru Bestari A8, Bandar Meru Raya, 30020 Ipoh, Perak.
+              </address>
+              <p class="location-note">
+                Peta menggunakan carian nombor premis dan nama jalan. Pin syarikat belum disahkan.
+              </p>
               <div class="direction-links">
                 <a
                   class="button button-primary"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=No.%2061%2C%20Tingkat%201%2C%20Jalan%20Meru%20Bestari%20A8%2C%20Bandar%20Meru%20Raya%2C%2030020%20Ipoh%2C%20Perak"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=61%20Jalan%20Meru%20Bestari%20A8%2C%20Bandar%20Meru%20Raya%2C%20Ipoh%2C%20Perak"
                   target="_blank"
                   rel="noopener noreferrer"
                   >Buka Google Maps <span aria-hidden="true">↗</span></a
                 >
                 <a
                   class="button button-outline"
-                  href="https://waze.com/ul?q=No.%2061%2C%20Tingkat%201%2C%20Jalan%20Meru%20Bestari%20A8%2C%20Bandar%20Meru%20Raya%2C%2030020%20Ipoh%2C%20Perak&amp;navigate=yes"
+                  id="waze-directions"
+                  href="https://www.waze.com/live-map/"
+                  data-app-href="https://www.waze.com/ul?q=61%20Jalan%20Meru%20Bestari%20A8%2C%20Bandar%20Meru%20Raya%2C%20Ipoh%2C%20Perak"
                   target="_blank"
                   rel="noopener noreferrer"
                   >Buka Waze <span aria-hidden="true">↗</span></a
                 >
+                <button class="button button-outline" id="copy-address" type="button">
+                  Salin Alamat <span aria-hidden="true">⧉</span>
+                </button>
               </div>
+              <p class="location-note">
+                Pada komputer, tampal alamat yang disalin dalam ruangan destinasi Waze Live Map. Pada telefon atau
+                tablet, Waze boleh membuka carian dalam aplikasi jika tersedia. Jika aplikasi tidak tersedia, gunakan
+                <a href="https://www.waze.com/live-map/" target="_blank" rel="noopener noreferrer"
+                  >Waze Live Map dalam pelayar</a
+                >.
+              </p>
+              <p class="location-note" id="address-status" role="status" aria-live="polite"></p>
             </div>
           </div>
         </div>
