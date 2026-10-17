@@ -953,31 +953,22 @@ em {
 }
 .organization-photo {
   width: 112px;
-  height: 130px;
+  height: 140px;
   flex: 0 0 112px;
-  border: 2px dashed #9bb8c8;
+  border: 2px solid #9bb8c8;
+  border-radius: 3px;
   background: #ecf4f7;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3px;
-  color: #66869a;
+  overflow: hidden;
 }
 .manager-card .organization-photo {
   background: #143b64;
   border-color: #7ecbc3;
-  color: #b4e8e0;
 }
-.organization-photo span {
-  font-size: 3.3rem;
-  line-height: 1;
-}
-.organization-photo small {
-  font-size: 0.58rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-align: center;
+.organization-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .organization-role {
   display: block;
@@ -1565,14 +1556,8 @@ em {
   }
   .organization-photo {
     width: 88px;
-    height: 105px;
+    height: 110px;
     flex-basis: 88px;
-  }
-  .organization-photo span {
-    font-size: 2.7rem;
-  }
-  .organization-photo small {
-    font-size: 0.48rem;
   }
   .organization-detail h3 {
     font-size: 1.12rem;
