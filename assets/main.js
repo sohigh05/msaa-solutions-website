@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <header class="site-header">
       <div class="container nav-inner">
         <a class="brand" href="index.html" aria-label="MSAA Solutions — laman utama">
-          <img class="brand-logo" src="assets/logo-msaa.png" alt="">
+          <img class="brand-logo" src="assets/logo-msaa-utama.png" alt="" width="500" height="500">
           <span class="brand-text">MSAA <small>SOLUTIONS</small></span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false"
@@ -40,7 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="container">
         <div class="footer-grid">
           <div>
-            <div class="footer-brand">MSAA <span>SOLUTIONS</span></div>
+            <!-- Logo rasmi yang sama digunakan pada setiap halaman. -->
+            <a class="footer-brand" href="index.html" aria-label="MSAA Solutions — laman utama">
+              <img src="assets/logo-msaa-utama.png" alt="Logo MSAA Solutions" width="500" height="500" loading="lazy">
+            </a>
             <p>MSAA Solutions menyediakan perkhidmatan pembinaan,
               penyelenggaraan dan pembekalan. Syarikat beralamat di Ipoh, Perak.</p>
           </div>
@@ -105,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="loader-content">
       <div class="animated-logo">
         <span class="logo-halo" aria-hidden="true"></span>
-        <div class="logo-panel"><img src="assets/logo-msaa.png" alt="Logo MSAA Solutions"></div>
+        <div class="logo-panel"><img src="assets/logo-msaa-utama.png" alt="Logo MSAA Solutions" width="500" height="500"></div>
       </div>
       <p>LAMAN SEDANG DIMUAT</p>
       <div class="loader-bar"><span></span></div>
@@ -128,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="transition-content">
       <div class="animated-logo">
         <span class="logo-halo" aria-hidden="true"></span>
-        <div class="logo-panel"><img src="assets/logo-msaa.png" alt=""></div>
+        <div class="logo-panel"><img src="assets/logo-msaa-utama.png" alt="" width="500" height="500"></div>
       </div>
       <p>MSAA SOLUTIONS</p>
     </div>`;
