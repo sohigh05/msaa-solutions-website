@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Lihat galeri foto projek MSAA Solutions." />
+    <title>Galeri Projek | MSAA Solutions</title>
+    <link rel="icon" type="image/png" sizes="500x500" href="assets/logo-msaa-utama.png" />
+    <link rel="apple-touch-icon" href="assets/logo-msaa-utama.png" />
+    <link rel="stylesheet" href="assets/style.css?v=15" />
+    <script defer src="assets/main.js?v=15"></script>
+    <script defer src="assets/galeri.js?v=1"></script>
+  </head>
+  <body data-page="galeri">
+    <div id="site-header"></div>
+    <main id="main-content">
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow light"><span class="eyebrow-line"></span> DOKUMENTASI PROJEK</p>
+          <h1>Galeri <em>Projek.</em></h1>
+          <p>Pilih gambar untuk melihatnya dalam paparan yang lebih besar.</p>
+        </div>
+      </section>
+
+      <section class="section-pad" aria-labelledby="gallery-title">
+        <div class="container">
+          <h2 id="gallery-title">Foto Projek</h2>
+          <p class="gallery-notice">© MSAA Solutions. Hak cipta terpelihara. Untuk tontonan sahaja; penggunaan semula memerlukan kebenaran.</p>
+          <div class="project-grid" data-project-grid></div>
+          <noscript><p>Aktifkan JavaScript untuk menggunakan galeri projek.</p></noscript>
+        </div>
+      </section>
+
+      <dialog class="project-view" aria-labelledby="project-title">
+        <div class="project-view-bar">
+          <h2 id="project-title" aria-live="polite"></h2>
+          <button type="button" data-close autofocus>Tutup</button>
+        </div>
+        <img class="project-photo" draggable="false" alt="" />
+        <div class="project-view-bar">
+          <button type="button" data-prev>Sebelumnya</button>
+          <button type="button" data-next>Seterusnya</button>
+        </div>
+      </dialog>
+    </main>
+    <div id="site-footer"></div>
+  </body>
+</html>

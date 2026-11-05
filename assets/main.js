@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ["tentang", "Tentang Kami", "tentang.html"],
     ["organisasi", "Carta Organisasi", "tentang.html#organisasi"],
     ["perkhidmatan", "Perkhidmatan", "perkhidmatan.html"],
+    ["galeri", "Galeri Projek", "galeri.html"],
     ["hubungi", "Hubungi Kami", "hubungi.html"],
   ];
 
